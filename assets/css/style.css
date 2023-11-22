@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/* GLOBAL STYLE */
+* {
+  color: #6f1c00;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+h1,
+h2 {
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 1rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  h1,
+  h2 {
+    text-align: left;
+    margin-top: 5%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  h1,
+  h2 {
+    margin-top: 2%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+/* HEADER */
+header {
+  background-color: #fef7e2;
+  border-radius: 50px;
+  margin: 7% 2%;
+  padding: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul li {
+  background-color: #ffdf7f;
+  border-radius: 50px;
+  margin: 0.3rem;
+  gap: 1%;
+  cursor: pointer;
+}
+
+ul > li:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  padding: 2rem 3rem;
+  margin: 1rem 1.5rem 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+nav ul > li > img {
+  display: block;
+  width: 26%;
+}
+
+ul li:not(li:first-of-type) {
+  flex-basis: 33%;
+  padding: 0.7rem;
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    margin: 0;
+    border-radius: 0;
+    padding: 2.5%;
+  }
+
+  ul {
+    flex-wrap: nowrap;
+  }
+
+  ul > li:first-of-type {
+    margin: 0;
+    padding: 5% 6%;
+    width: 20%;
+    font-size: 1.5rem;
+    order: 2;
+  }
+
+  nav ul > li > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+
+  nav ul li:not(li:first-of-type) {
+    font-size: 0.8rem;
+  }
+  nav ul li:nth-child(2),
+  nav ul li:nth-child(3) {
+    order: 1;
+  }
+  nav ul li:nth-child(4),
+  nav ul li:nth-child(5) {
+    order: 3;
+  }
+
+  /*  ul li:not(li:first-of-type) {
+  } */
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 3% 2% 0 2%;
+  }
+
+  nav {
+    height: 100%;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 2%;
+  }
+
+  ul li:first-of-type {
+    font-size: 1.5rem;
+    flex-basis: 12%;
+    padding: 0 4.5rem;
+    order: 1;
+  }
+
+  u li img {
+    width: 50%;
+  }
+
+  nav ul > li > img {
+    width: 120%;
+    margin-right: 20%;
+  }
+
+  nav ul li {
+    font-size: 0.8rem;
+  }
+  nav ul li:nth-child(2),
+  nav ul li:nth-child(3) {
+    order: 2;
+  }
+  nav ul li:nth-child(4),
+  nav ul li:nth-child(5) {
+    order: 3;
+  }
+
+  nav ul li:not(li:first-of-type) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 12%;
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    width: 20%;
+    font-size: 2rem;
+  }
+
+  ul li:first-of-type {
+    flex-basis: 13%;
+    padding: 0 5rem;
+    order: 1;
+  }
+
+  nav ul > li > img {
+    width: 120%;
+    margin-right: 20%;
+  }
+
+  nav ul li {
+    font-size: 0.8rem;
+  }
+
+  nav ul li:not(li:first-of-type) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 13%;
+    padding: 0 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  header {
+    width: 12%;
+  }
+}
+/* MAIN */
+
+/* card div */
+.card {
+  margin: 8% 4%;
+  border-radius: 40px;
+  background-color: #fef7e2;
+  padding-bottom: 2%;
+  /*  display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.card-text div:first-child p:first-of-type {
+  font-weight: bold;
+}
+.card-text div:first-child p:last-of-type {
+  font-size: 0.7rem;
+}
+
+.card button {
+  display: block;
+  margin: 2% auto;
+  border: none;
+  font-weight: bold;
+  background-color: #ffdf7f;
+  padding: 0.5rem 4rem;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .container-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    margin: 2% 0;
+    flex-basis: 46%;
+  }
+
+  .card button {
+    padding: 0.5rem 2rem;
+    margin: 3% auto 0.5% auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    margin-left: 32%;
+    margin-right: 2%;
+  }
+
+  .card {
+    flex-basis: 30%;
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    gap: 10%;
+  }
+
+  .card-text div:first-child p:first-of-type {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    margin-left: 27%;
+  }
+
+  .card {
+    flex-basis: 23%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  main {
+    margin-left: 18%;
+  }
+
+  .container-card {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2%;
+  }
+
+  .card {
+    flex-basis: 20%;
+    padding-bottom: 1rem;
+  }
+
+  .card-text div:first-child p:first-of-type {
+    width: 100%;
+  }
+
+  .card button {
+    padding: 0.5rem 3rem;
+  }
+}
+
+/* SECTION */
+section {
+  margin: 0 4%;
+}
+
+article {
+  background-color: #fef7e2;
+  padding: 10% 7%;
+  border-radius: 30px;
+}
+
+article p {
+  margin-bottom: 10%;
+}
+
+article img {
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  article {
+    padding: 5%;
+  }
+
+  article p {
+    margin-bottom: 6%;
+  }
+}
+@media screen and (min-width: 769px) {
+  section {
+    margin-left: 32%;
+    margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    margin-left: 27%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  section {
+    margin-left: 18%;
+    padding: 0;
+  }
+
+  article {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 2.5%;
+  }
+
+  article img {
+    width: 50%;
+  }
+}
